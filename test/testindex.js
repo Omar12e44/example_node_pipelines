@@ -1,10 +1,8 @@
-import crypto from "crypto";
+import crypto from 'crypto';
 
-function hash(mensaje) {
-    const hash = crypto.createHash('sha512');
-    hash.update(mensaje);
+function hash(message) {
+    hash.update(message);
     return hash.digest('hex');
 }
 
-
-module.exports = hash;
+module.exports = hash()
